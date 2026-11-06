@@ -95,7 +95,7 @@ footer{font:13px system-ui,sans-serif;color:var(--muted);text-align:center;margi
 
 
 def render(items):
-    now = datetime.now(timezone.utc)
+        now = datetime.now(timezone(timedelta(hours=3)))
     date = now.strftime("%A, %d %B %Y · updated %H:%M")
     cards = ""
     for i, it in enumerate(items, 1):
@@ -112,7 +112,7 @@ def render(items):
 <style>{CSS}</style></head>
 <body><main>
 <header><div class="kicker">World Politics · Daily Brief</div>
-<h1>5 Things to Know Today</h1><div class="date">{date} (UTC)</div></header>
+<h1>5 Things to Know Today</h1><div class="date">{date} (GMT+3)</div></header>
 {cards}<footer>Updated automatically from public news feeds. Tap a headline to read the full story.</footer>
 </main></body></html>
 """
