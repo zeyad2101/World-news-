@@ -98,7 +98,7 @@ footer{font:13px system-ui,sans-serif;color:var(--muted);text-align:center;margi
 
 def render(items):
     now = datetime.now(timezone.utc)
-    date = now.strftime("%A, %d %B %Y")
+        date = now.strftime("%A, %d %B %Y · updated %H:%M")
     cards = ""
     for i, it in enumerate(items, 1):
         e = html.escape
